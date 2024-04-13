@@ -1,0 +1,186 @@
+{% extends 'shared/plantilla.html' %}
+<!-- -- -->
+{% block title %}Conceptos de Trabajador{% endblock %}
+
+<!-- -- -->
+{% block content %}
+<!-- navbar con titulo -->
+<div class="d-flex justify-content-between py-2 border-bottom border-2">
+  <h2 class="text-danger">REGIMEN PENSIONARIO</h2>
+  <button class="btn text-white rounded-0 px-4" style="background: #5c1260">
+    Periodo
+  </button>
+</div>
+
+<!-- Contenido -->
+<div class="row" style="height: calc(100% - 64px)">
+  <!-- Tablas -->
+  <div class="col-3 p-0" style="border: 2px solid rgb(209, 198, 198)">
+    <div style="width: 100%; height: 50px; background: #e0e2e6"></div>
+
+    <!-- tabla 1 -->
+    <table class="table table-sm table-bordered">
+      <thead>
+        <tr class="table-secondary">
+          <td colspan="1"></td>
+          <td colspan="2">Nombre / Apellidos</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>TIPO EMPLEADO:4-OBRERO</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>TIPO EMPLEADO:6-EMPLEADO</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- ------------------------------ -->
+  <div class="col-9">
+    <!-- botones -->
+    <div class="mt-2">
+      <button class="p-0 pe-2" style="border: none; border: 1px solid #c6c7c7">
+        <img
+          src="{{ url_for('static', filename='img/plus.svg') }}"
+          width="40px"
+          class="m-0"
+        />
+        <span>Agregar</span>
+      </button>
+      <button class="p-0 pe-2" style="border: none; border: 1px solid #c6c7c7">
+        <img
+          src="{{ url_for('static', filename='img/plus.svg') }}"
+          width="40px"
+          class="m-0"
+        />
+        <span>Guardar</span>
+      </button>
+      <button class="p-0 pe-2" style="border: none; border: 1px solid #c6c7c7">
+        <img
+          src="{{ url_for('static', filename='img/trash.svg') }}"
+          width="40px"
+          class="p-1"
+        />
+        <span>Elimiar</span>
+      </button>
+    </div>
+
+    <!-- filas -->
+    <div class="-4">
+      <!-- navegacion -->
+      <div class="mt-2">
+        <ul class="pagination m-0">
+          <li class="page-item">
+            <a href="" class="page-link">...::: Datos Generales :::...</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- contenido 1-->
+      <div class="border border-2 rounded-2 p-3" style="background: #f1f4ef">
+        <!-- fila 1 -->
+        <div class="row mb-2">
+          <label class="col-1 col-form-label" for="">Tipo:</label>
+          <div class="col-2">
+            <select class="form-select" name="" id="">
+              <option value="1">INGRESO</option>
+            </select>
+          </div>
+        </div>
+        <!-- fila 2 -->
+        <div class="row mb-2">
+          <label class="col-1 col-form-label" for="">Conceptos:</label>
+          <div class="col-5">
+            <select class="form-select" name="" id="">
+              <option value="1">INGRESOS: GRATIFICACION / AGUINALDOS</option>
+            </select>
+          </div>
+        </div>
+        <!-- fila 3 -->
+        <div class="row mb-2">
+          <label class="col-1 col-form-label" for="">Descripcion:</label>
+          <div class="col-5">
+            <select class="form-select" name="" id="">
+              <option value="1">GRATIFICACION PROPORCIONAL - LEY 32351</option>
+            </select>
+          </div>
+        </div>
+        <!-- fila 4 -->
+        <div class="row mb-2">
+          <label class="col-1 col-form-label" for="">Descripcion:</label>
+          <div class="col-2">
+            <input type="text" class="form-control" />
+          </div>
+          <label class="col-auto col-form-label" for="">Periodo:</label>
+          <div class="col-2">
+            <select class="form-select" name="" id="">
+              <option value="1"></option>
+            </select>
+          </div>
+          <label class="col-auto col-form-label" for="">Año:</label>
+          <button class="col-1 me-5">2017</button>
+        </div>
+      </div>
+
+      <!-- contenido 2 -->
+      <div class="row mt-2 pe-3">
+        <label class="col-2 col-form-label" for="">Seleccionar Periodo:</label>
+        <div class="col-2">
+          <select class="form-select" name="" id="">
+            <option value="1">Julio</option>
+          </select>
+        </div>
+        <button class="col-8">INTEGRA</button>
+      </div>
+
+      <!-- contenido 3 -->
+      <div
+        class="mt-3 rounded-1 overflow-hidden border border-2"
+        style="border: 0px solid red"
+      >
+        <div style="height: 50px; width: 100%; background: #bdbdbe"></div>
+
+        <table class="table table-bordered table-sm w-100 m-0">
+          <thead>
+            <tr>
+              <td>Descripcion</td>
+              <td>Porcentaje</td>
+              <td>Monto</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SISTEMA PRIVADO DE PENSIONES - APORTACIONES OBLIGATORIAS</td>
+              <td class="text-end">0.00</td>
+              <td class="text-end">0.00</td>
+            </tr>
+            <tr>
+              <td>SISTEMA PRIVADO DE PENSIONES - COMISION PORCENTUAL</td>
+              <td class="text-end">0.00</td>
+              <td class="text-end">0.00</td>
+            </tr>
+            <tr>
+              <td>SISTEMA PRIVADO DE PENSIONES - PRIMA DE SEGURO</td>
+              <td class="text-end">0.00</td>
+              <td class="text-end">0.00</td>
+            </tr>
+            <tr>
+              <td>SISTEMA PRIVADO DE PENSIONES - APORTACIONES OBLIGATORIAS</td>
+              <td class="text-end">0.00</td>
+              <td class="text-end">0.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div></div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

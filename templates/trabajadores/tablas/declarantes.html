@@ -1,0 +1,165 @@
+{% extends 'shared/plantilla.html' %}
+<!-- -- -->
+{% block title %}Declarantes{% endblock %}
+
+<!-- -- -->
+{% block content %}
+<!-- ----------- -->
+<div class="d-flex justify-content-between py-2 border-bottom border-2">
+  <h2 class="text-danger">GESTION EMPRESAS</h2>
+  <button class="btn text-white rounded-0 px-4" style="background: #5c1260">
+    Periodo
+  </button>
+</div>
+
+<!-- ------------------- -->
+<div class="row" style="height: calc(100% - 64px)">
+  <!-- ---------------------- -->
+  <div class="col-3 p-0" style="border: 2px solid rgb(209, 198, 198)">
+    <div style="width: 100%; height: 50px; background: #e0e2e6"></div>
+
+    <!-- tabla 1 -->
+    <table class="table table-bordered table-sm">
+      <thead>
+        <tr class="table-secondary">
+          <td></td>
+          <td>Razon Social / Nombre Comercial</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>MECATRONIC</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>D&H MECATRONIC</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Soluciones</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>D&H DIESEL PARTS</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>IMPORTACIONES SELECTOS</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>RECTIFICACIONES DHIGZA</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>ALFONZO DURAN TOLENTINO</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>COMMON RAIL</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- ------------------------------ -->
+  <div class="col-9">
+    <!-- botones -->
+    <div class="mt-2">
+      <button class="p-0 pe-2" style="border: none; border: 1px solid #c6c7c7">
+        <img
+          src="{{ url_for('static', filename='img/plus.svg') }}"
+          width="40px"
+          class="m-0"
+        />
+        <span>Agregar</span>
+      </button>
+      <button class="p-0 pe-2" style="border: none; border: 1px solid #c6c7c7">
+        <img
+          src="{{ url_for('static', filename='img/plus.svg') }}"
+          width="40px"
+          class="m-0"
+        />
+        <span>Guardar</span>
+      </button>
+      <button class="p-0 pe-2" style="border: none; border: 1px solid #c6c7c7">
+        <img
+          src="{{ url_for('static', filename='img/trash.svg') }}"
+          width="40px"
+          class="p-1"
+        />
+        <span>Elimiar</span>
+      </button>
+    </div>
+
+    <div style="margin-top: 10rem">
+      <!-- fila 1 -->
+      <div class="row mb-1">
+        <label class="col-1 col-form-label" for="">Codigo:</label>
+        <div class="col-2">
+          <input type="text" class="form-control" />
+        </div>
+        <label class="col-1 col-form-label" for="">RUC:</label>
+        <div class="col-2">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <!-- fila 2 -->
+      <div class="row mb-1">
+        <label class="col-2 col-form-label" for="">Razon Social:</label>
+        <div class="col-6">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <!-- fila 3 -->
+      <div class="row mb-1">
+        <label class="col-2 col-form-label" for="">Nombre Comercial:</label>
+        <div class="col-6">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <!-- fila 4 -->
+      <div class="row mb-1">
+        <label class="col-2 col-form-label" for="">Direccion:</label>
+        <div class="col-6">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <!-- fila 5 -->
+      <div class="row mb-1">
+        <label class="col-2 col-form-label" for="">Representante Legal:</label>
+        <div class="col-2">
+          <input type="text" class="form-control" />
+        </div>
+        <label class="col-1 col-form-label" for="">DNI:</label>
+        <div class="col-2">
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+
+      <!-- fila 6 -->
+      <div class="row">
+        <label class="col-2 col-form-label" for="">Region Patronal:</label>
+        <div class="col-2">
+          <input type="text" class="form-control" />
+        </div>
+        <label class="col-2 col-form-label" for="">Regimen Laboral:</label>
+        <div class="col-2">
+          <select class="form-select">
+            <option value="1">PRIVADO</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

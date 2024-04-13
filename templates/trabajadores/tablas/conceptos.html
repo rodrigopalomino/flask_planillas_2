@@ -1,0 +1,97 @@
+{% extends 'shared/plantilla.html' %}
+<!-- -- -->
+{% block title %}Conceptos{% endblock %}
+
+<!-- -- -->
+{% block content %}
+<!-- navbar con titulo -->
+<div class="d-flex justify-content-between py-2 border-bottom border-2">
+  <h2 class="text-danger">GESTION CONCEPTOS - [INGRESOS]</h2>
+  <button class="btn text-white rounded-0 px-4" style="background: #5c1260">
+    Periodo
+  </button>
+</div>
+
+<!-- Contenido -->
+<div class="px-3 pt-2" style="height: calc(100% - 64px)">
+  <!-- fila 1 -->
+  <div class="row">
+    <label for="" class="col-auto col-form-label">Tipo:</label>
+    <div class="col-3">
+      <select class="form-select" id="">
+        <option value="">Ingresos</option>
+        <option value="">Ingresos : Asignados</option>
+        <option value="">Ingresos : Bonificaciones</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- tabla -->
+  <div
+    class="mt-3 rounded-1 overflow-hidden border border-2"
+    style="border: 0px solid red"
+  >
+    <div style="height: 50px; width: 100%; background: #bdbdbe"></div>
+
+    <table class="table table-bordered table-sm w-100 m-0">
+      <thead>
+        <tr>
+          <td style="width: 15%">Codigo</td>
+          <td style="width: 50%">Descripcion</td>
+          <td style="width: 15%">Estado</td>
+          <td style="width: 10%">Activar</td>
+          <td style="width: 10%">Desactivar</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0101</td>
+          <td>ALIMENTACION PRINCIPAL DE DINERO</td>
+          <td>Desactivo</td>
+          <td>
+            <img src="../../img/check.svg" style="width: 25px" />
+          </td>
+          <td><img src="../../img/cross.svg" style="width: 20px" /></td>
+        </tr>
+        <tr>
+          <td>0101</td>
+          <td>ALIMENTACION PRINCIPAL DE DINERO</td>
+          <td>Desactivo</td>
+          <td>
+            <img src="../../img/check.svg" style="width: 25px" />
+          </td>
+          <td><img src="../../img/cross.svg" style="width: 20px" /></td>
+        </tr>
+        <tr>
+          <td>0101</td>
+          <td>ALIMENTACION PRINCIPAL DE DINERO</td>
+          <td>Desactivo</td>
+          <td>
+            <img src="../../img/check.svg" style="width: 25px" />
+          </td>
+          <td><img src="../../img/cross.svg" style="width: 20px" /></td>
+        </tr>
+        <tr>
+          <td>0101</td>
+          <td>ALIMENTACION PRINCIPAL DE DINERO</td>
+          <td>Desactivo</td>
+          <td>
+            <img src="../../img/check.svg" style="width: 25px" />
+          </td>
+          <td><img src="../../img/cross.svg" style="width: 20px" /></td>
+        </tr>
+        <tr>
+          <td>0101</td>
+          <td>ALIMENTACION PRINCIPAL DE DINERO</td>
+          <td>Desactivo</td>
+          <td>
+            <img src="../../img/check.svg" style="width: 25px" />
+          </td>
+          <td><img src="../../img/cross.svg" style="width: 20px" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

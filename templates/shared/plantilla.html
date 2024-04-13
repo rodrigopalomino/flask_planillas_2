@@ -1,0 +1,264 @@
+<!-- Completo -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>{% block title %}plantilla{% endblock %}</title>
+  </head>
+  <body>
+    {% include "shared/navbar.html" %}
+
+    <div class="row m-0" style="height: calc(100vh - 62px)">
+      <div
+        class="col-2 p-0 overflow-y-auto overflow-x-hidden"
+        style="background: #212120; height: 100%"
+      >
+        <img
+          src="{{ url_for('static', filename='img/logoPanel.png') }}"
+          width="100%"
+        />
+        <!-- Acordion Personal -->
+        <div class="accordion mt-2">
+          <div
+            class="accordion-item rounded-0 border-0"
+            style="background: transparent"
+          >
+            <h2 class="accordion-header">
+              <button
+                class="text-white w-100 px-3 border-0 d-flex align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acordionPersonal"
+                aria-expanded="true"
+                aria-controls="acordionPersonal"
+                style="background: transparent"
+              >
+                <img
+                  src="{{ url_for('static', filename='img/person.svg') }}"
+                  width="25px"
+                />
+                <span class="fs-5 ms-2">PERSONAL</span>
+                <img
+                  src=" {{ url_for('static', filename='img/arriba.png') }} "
+                  class="ms-auto"
+                />
+              </button>
+            </h2>
+            <div
+              id="acordionPersonal"
+              class="accordion-collapse collapse text-white p-4 row g-4 {%if 'personal' in request.path %} show {% endif %}"
+            >
+              <a
+                href="/trabajadores/personal/fichaPersonal"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'fichaPersonal' %}text-white{% endif %}"
+                >Ficha de Personal</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Contratos</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Derechos de Ambiente</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Contro de Permisos</a
+              >
+              <a
+                href="/trabajadores/personal/controlAsistencia"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'controlAsistencia' %}text-white{% endif %}"
+                >Control de Asistencia</a
+              >
+              <a
+                href="/trabajadores/personal/adelantoAsistencia"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'adelantoAsistencia' %}text-white{% endif %}"
+                >Adelando y/o Asistencia</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Prestamos</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Pre/Pos Natal / Bonificaciones</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Acordion Asignacion de Conceptos -->
+        <div class="accordion mt-2">
+          <div
+            class="accordion-item rounded-0 border-0"
+            style="background: transparent"
+          >
+            <h2 class="accordion-header">
+              <button
+                class="text-white w-100 px-3 border-0 d-flex align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acordionAsignacionConceptos"
+                aria-expanded="true"
+                aria-controls="acordionAsignacionConceptos"
+                style="background: transparent"
+              >
+                <img
+                  src="{{ url_for('static', filename='img/person.svg') }}"
+                  width="25px"
+                />
+                <span class="fs-5">Asignacion de Conceptos</span>
+                <img
+                  src="{{ url_for('static', filename='img/arriba.png') }}"
+                  class="ms-auto"
+                />
+              </button>
+            </h2>
+            <div
+              id="acordionAsignacionConceptos"
+              class="accordion-collapse collapse text-white p-4 row g-4 {%if 'asignacionConceptos' in request.path %} show {% endif %}"
+            >
+              <a
+                href="/trabajadores/asignacionConceptos/conceptosTrabajador"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'conceptosTrabajador' %}text-white{% endif %}"
+                >Conceptos por trabajador</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Conceptos por sede</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Aplicar a todos</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Acordion Tablas -->
+        <div class="accordion mt-2">
+          <div
+            class="accordion-item rounded-0 border-0"
+            style="background: transparent"
+          >
+            <h2 class="accordion-header">
+              <button
+                class="text-white w-100 px-3 border-0 d-flex align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#acordionTablas"
+                aria-expanded="true"
+                aria-controls="acordionTablas"
+                style="background: transparent"
+              >
+                <img
+                  src="{{ url_for('static', filename='img/configuracion.svg') }}"
+                  width="23px"
+                />
+                <span class="fs-5 ms-2">Tablas</span>
+                <img
+                  src="{{url_for('static', filename='img/arriba.png')}}"
+                  class="ms-auto"
+                />
+              </button>
+            </h2>
+            <div
+              id="acordionTablas"
+              class="accordion-collapse collapse text-white p-4 row g-4 {%if 'tablas' in request.path %} show {% endif %}"
+            >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Iniciar Periodo</a
+              >
+              <a
+                href="/trabajadores/tablas/declarantes"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'declarantes' %}text-white{% endif %}"
+                >Declarantes</a
+              >
+              <a
+                href="/trabajadores/tablas/sede"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'sede' %}text-white{% endif %}"
+                >Sede</a
+              >
+              <a
+                href="/trabajadores/tablas/centroCostos"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'centroCostos' %}text-white{% endif %}"
+                >Centro de costos</a
+              >
+              <a
+                href="/trabajadores/tablas/cargo"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'cargo' %}text-white{% endif %}"
+                >Cargo</a
+              >
+              <a
+                href="/trabajadores/tablas/departamento"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'departamento' %}text-white{% endif %}"
+                >Departamento</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Moneda</a
+              >
+              <a
+                href="/trabajadores/tablas/conceptos"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'conceptos' %}text-white{% endif %}"
+                >Conceptos</a
+              >
+              <a
+                href="/trabajadores/tablas/comisionAFPs"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'comisionAFPs' %}text-white{% endif %}"
+                >Comision AFPs</a
+              >
+              <a
+                href="/trabajadores/tablas/regimenPensionario"
+                class="d-block link-underline link-underline-opacity-0 {% if pagina != 'regimenPensionario' %}text-white{% endif %}"
+                >Regimen pensionario</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Turno</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Monto por hora</a
+              >
+              <a
+                href="#"
+                class="d-block link-underline link-underline-opacity-0 text-white"
+                >Bancos</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-10" style="background: #eaedee">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

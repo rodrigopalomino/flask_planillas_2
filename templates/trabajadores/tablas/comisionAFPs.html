@@ -1,0 +1,98 @@
+{% extends 'shared/plantilla.html' %}
+<!-- -- -->
+{% block title %}Comision AFPs{% endblock %}
+
+<!-- -- -->
+{% block content %}
+<!-- navbar con titulo -->
+<div class="d-flex justify-content-between py-2 border-bottom border-2">
+  <h2 class="text-danger">REGIMEN PENSIONARIO - [COMISIONES]</h2>
+  <button class="btn text-white rounded-0 px-4" style="background: #5c1260">
+    Periodo
+  </button>
+</div>
+
+<!-- Contenido -->
+<div class="px-3 pt-2" style="height: calc(100% - 64px)">
+  <div class="row border border-2 py-4 mx-1" style="background: #e1e3e4">
+    <label class="col-auto col-form-label">Mes de devengue:</label>
+    <div class="col-3">
+      <select class="form-select" name="" id="">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agusto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+    </div>
+    <label class="col-auto col-form-label">Año activo:</label>
+    <button class="col-1 me-5">2017</button>
+    <button
+      class="btn col-1 text-white rounded-0 px-4"
+      style="background: #5c1260"
+    >
+      Copiar
+    </button>
+  </div>
+
+  <div class="mt-3 rounded-1 overflow-hidden border border-2">
+    <div style="height: 50px; width: 100%; background: #bdbdbe"></div>
+
+    <table class="table table-bordered table-sm w-100 m-0">
+      <thead>
+        <tr>
+          <td colspan="2"></td>
+          <td colspan="2">Comision mixta</td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td>A.F.P</td>
+          <td>Comision %</td>
+          <td>Flujo %</td>
+          <td>Saldo %</td>
+          <td>Saldo</td>
+          <td>Seguro</td>
+          <td>Aporte</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PROFUTURO</td>
+          <td class="text-end">1.69</td>
+          <td class="text-end">1.49</td>
+          <td class="text-end">1.20</td>
+          <td class="text-end">1.36</td>
+          <td class="text-end">10.00</td>
+          <td class="text-end">9.196.44</td>
+        </tr>
+        <tr>
+          <td>PRIMA</td>
+          <td class="text-end">1.69</td>
+          <td class="text-end">1.49</td>
+          <td class="text-end">1.20</td>
+          <td class="text-end">1.36</td>
+          <td class="text-end">10.00</td>
+          <td class="text-end">9.196.44</td>
+        </tr>
+        <tr>
+          <td>INTEGRA</td>
+          <td class="text-end">1.69</td>
+          <td class="text-end">1.49</td>
+          <td class="text-end">1.20</td>
+          <td class="text-end">1.36</td>
+          <td class="text-end">10.00</td>
+          <td class="text-end">9.196.44</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

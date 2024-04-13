@@ -1,0 +1,108 @@
+{% extends 'shared/plantilla.html' %}
+<!-- -- -->
+{% block title %}Adelanto de Asistencia{% endblock %}
+
+<!-- -- -->
+{% block content %}
+<!-- ----------- -->
+<div class="d-flex justify-content-between py-2 border-bottom border-2">
+  <h2 class="text-danger">QUINCENA</h2>
+  <button class="btn text-white rounded-0 px-4" style="background: #5c1260">
+    Periodo
+  </button>
+</div>
+
+<!-- ------------------- -->
+<div class="ps-3" style="height: calc(100% - 62px)">
+  <button class="mt-2 px-1" style="border: none; border: 1px solid #c6c7c7">
+    <img
+      src="{{ url_for('static', filename='img/plus.svg') }}"
+      width="40px"
+      class="m-0"
+    />
+
+    <span>Guardar</span>
+  </button>
+
+  <!-- --------------------- -->
+  <div class="mt-3 border border-2 px-2 py-4 mx-1" style="background: #e1e3e4">
+    <!-- ---------- -->
+    <div class="row">
+      <label class="col-1 col-form-label" for="">Tipo registro:</label>
+      <div class="col-2">
+        <select class="form-select" name="" id="">
+          <option value="1">QUINCENA</option>
+        </select>
+      </div>
+      <label class="col-auto col-form-label" for="">Periodo:</label>
+      <div class="col-2">
+        <select class="form-select" name="" id="">
+          <option value="1">ENERO</option>
+        </select>
+      </div>
+      <label class="col-auto col-form-label" for="">Año Activo:</label>
+      <button class="col-1 me-5">2017</button>
+      <label class="col-auto col-form-label" for=""
+        >Categoria Ocupacional:</label
+      >
+      <div class="col-2">
+        <select class="form-select" name="" id="">
+          <option value="1">Ejecutivo</option>
+        </select>
+      </div>
+    </div>
+    <!-- ---------- -->
+    <div class="row mt-2">
+      <label class="col-auto col-form-label" for="">Fecha:</label>
+      <div class="col-2">
+        <input type="text" class="form-control" />
+      </div>
+      <button
+        class="col-auto btn text-white rounded-0 px-4"
+        style="background: #5c1260"
+      >
+        Buscar
+      </button>
+      <label class="col-auto col-form-label" for="">Porcentaje:</label>
+      <div class="col-2">
+        <input type="text" class="form-control" />
+      </div>
+      <button
+        class="col-1 btn text-white rounded-0 px-4"
+        style="background: #5c1260"
+      >
+        Aplicar
+      </button>
+    </div>
+  </div>
+
+  <!-- -------------------------------------- -->
+  <div class="mt-3 rounded-1 overflow-hidden border border-2">
+    <div style="height: 50px; width: 100%; background: #bdbdbe"></div>
+
+    <table class="table table-bordered table-sm w-100 m-0">
+      <thead>
+        <tr>
+          <td>Codigo</td>
+          <td>Apellidos y Nombres</td>
+          <td>Sede</td>
+          <td>Sueldo</td>
+          <td>Fecha</td>
+          <td>Monto</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>.</td>
+          <td>.</td>
+          <td>.</td>
+          <td>.</td>
+          <td>.</td>
+          <td>.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}
